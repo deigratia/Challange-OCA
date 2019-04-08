@@ -1,21 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const { data } = require('./data')
 
 //gambar response 1
-const data = [
-    {
-        plat_nomor : "B 1235 TN",
-        warna : "hitam",
-        tipe: "SUV"
-    }, 
-    {
-        plat_nomor : "B 3333 WN",
-        warna : "Silver",
-        tipe: "MPV"
-    }
-]
-
-
 router.get('/report', (req,res) => {
   const tgl_masuk = (new Date().toLocaleDateString())
   const jam_masuk = (new Date().toLocaleTimeString())
